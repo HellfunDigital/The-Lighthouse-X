@@ -1,23 +1,17 @@
-1. "os" module: This module in Python provides functions for interacting with the operating system. All three files will need this to interact with the file system.
+1. HTML, CSS, and JavaScript: All three files (index.html, style.css, main.js) share a common dependency on the DOM structure. The HTML file defines the structure, the CSS file styles it, and the JavaScript file manipulates it.
 
-2. "subprocess" module: This module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes. This will be used in all files for running system commands.
+2. DOM Element IDs: These are shared between the HTML and JavaScript files. For example, the JavaScript file may use getElementById to manipulate a specific element defined in the HTML file.
 
-3. "logging" module: This module is used to record (log) events. All three files will need this to log the debugging and cleanup process.
+3. CSS Classes: These are shared between the HTML and CSS files. The HTML file assigns classes to elements, and the CSS file defines styles for these classes.
 
-4. "git" module: This module is used to interact with Git repositories. Both "debugger.py" and "cleanup.py" will need this to interact with the repo.
+4. Media Files: The img, audio, and video directories may contain media files that are referenced in the HTML, CSS, or JavaScript files.
 
-5. "json" module: This module is used to work with JSON data. If there are any configurations or data stored in JSON format, all three files will need this.
+5. Exported Variables: These are shared between different JavaScript files. If main.js exports a variable, it can be imported and used in another JavaScript file.
 
-6. "debug" function: This function will be defined in "debugger.py" and used in "main.py" to start the debugging process.
+6. Data Schemas: If the website uses a database, the data schemas would be shared across all files that interact with the database.
 
-7. "cleanup" function: This function will be defined in "cleanup.py" and used in "main.py" to start the cleanup process.
+7. Function Names: If functions are defined in one JavaScript file and used in another, the function names are a shared dependency.
 
-8. "main" function: This function will be defined in "main.py" and will use both "debug" and "cleanup" functions to debug and clean up the repo directory.
+8. Message Names: If the website uses a messaging system (like WebSocket or postMessage), the message names would be a shared dependency.
 
-9. "REPO_PATH" variable: This global variable will hold the path to the repo directory. It will be used in all three files.
-
-10. "LOG_FILE" variable: This global variable will hold the path to the log file. It will be used in all three files.
-
-11. "CONFIG_FILE" variable: This global variable will hold the path to the configuration file. It will be used in all three files.
-
-Please note that the actual shared dependencies might vary based on the specific requirements and implementation details of the program.
+9. README.md: This file doesn't share dependencies with the code, but it should include information about all dependencies used in the project, as well as instructions for setting up and running the project.

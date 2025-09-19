@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lantern Room // Lighthouse Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="subpage">
+    <header class="subpage__header">
+        <div class="container">
+            <p class="hero__eyebrow">Lantern Room Access Granted</p>
+            <h1>Moreau's Star Chamber</h1>
+            <p>The Fresnel array hums with low-frequency light. Brass panels record Moreau's notes, but the writing twists into riddles.</p>
+            <p><a class="inline-link" href="index.html">← Return to control deck</a></p>
+        </div>
+    </header>
+
+    <main class="container subpage__main">
+        <section class="card card--soft">
+            <h2>The keeper's wall</h2>
+            <p>Five constellations are etched into the glass. Trace the initials in order of their brightness: <strong>Beacon's Crown</strong>, <strong>Rift Serpent</strong>, <strong>Isle Weaver</strong>, <strong>Night Thorn</strong>, and <strong>Echo Veil</strong>.</p>
+            <p>The initials hum together, forming a word Moreau left behind. Enter it below to align the lenses.</p>
+            <form id="constellation-form" class="puzzle-form" novalidate>
+                <label for="constellation-answer">Constellation resonance (5 letters)</label>
+                <input id="constellation-answer" name="constellation-answer" maxlength="10" autocomplete="off" placeholder="_ _ _ _ _" required>
+                <button class="button button--primary" type="submit">Align lenses</button>
+                <p class="status-message" id="constellation-status" role="status" aria-live="polite"></p>
+            </form>
+            <div id="constellation-success" class="hidden reveal-card" aria-hidden="true">
+                <h3>Lenses synchronized</h3>
+                <p>The word <strong>BRINE</strong> resonates through the chamber. Floor panels slide, revealing a ladder spiralling down.</p>
+                <p><a class="inline-link" href="underdeck.html">Descend to the underdeck</a></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Moreau's diary shards</h2>
+            <ul class="diary">
+                <li><span class="diary__date">Entry 28</span> &mdash; "The <strong>b</strong>eam feels heavier each night. Something in the surf pulls at the light."</li>
+                <li><span class="diary__date">Entry 42</span> &mdash; "Salt infiltrates the wiring. The <strong>r</strong>esonant tone echoes in my ribs."</li>
+                <li><span class="diary__date">Entry 43</span> &mdash; "An <strong>i</strong>nk-black tide knocks twice beneath the stair."</li>
+                <li><span class="diary__date">Entry 44</span> &mdash; "The <strong>n</strong>ightthorn constellation aligned itself to point due north."</li>
+                <li><span class="diary__date">Entry 47</span> &mdash; "Only the <strong>e</strong>cho veil remains calm. I whisper thanks to the unseen listener."</li>
+            </ul>
+            <p class="note">Diary emphasis confirms the resonance key. Northlight keeps watch over those who listen.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Follow the hum. If the waves whisper, answer softly.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

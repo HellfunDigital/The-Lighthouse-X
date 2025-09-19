@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underdeck // Lighthouse Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="subpage">
+    <header class="subpage__header">
+        <div class="container">
+            <p class="hero__eyebrow">Underdeck Resonance Vault</p>
+            <h1>The undertow answers</h1>
+            <p>Below the lantern room, tuned pipes hum with the tide. Brass levers control resonance locks protecting Moreau's final message.</p>
+            <p><a class="inline-link" href="lantern-room.html">← Climb back to the Lantern Room</a></p>
+        </div>
+    </header>
+
+    <main class="container subpage__main">
+        <section class="card card--soft">
+            <h2>Resonance lock</h2>
+            <p>Cycle the levers until they echo the keeper's favorite cadence: <strong>Up &rarr; Up &rarr; Down &rarr; Down &rarr; Right</strong>. Each press advances a lever through the sequence.</p>
+            <div class="switch-board" role="group" aria-label="Resonance levers">
+                <button class="switch" type="button" data-switch data-state="up" aria-pressed="false">UP</button>
+                <button class="switch" type="button" data-switch data-state="up" aria-pressed="false">UP</button>
+                <button class="switch" type="button" data-switch data-state="up" aria-pressed="false">UP</button>
+                <button class="switch" type="button" data-switch data-state="up" aria-pressed="false">UP</button>
+                <button class="switch" type="button" data-switch data-state="up" aria-pressed="false">UP</button>
+            </div>
+            <p class="status-message" id="underdeck-status" role="status" aria-live="polite"></p>
+            <div id="underdeck-success" class="hidden reveal-card" aria-hidden="true">
+                <h3>Vault unlocked</h3>
+                <p>A low chord vibrates through the hull. A watertight satchel surfaces, containing Moreau's final log.</p>
+                <p><strong>Message:</strong> "If the beam dies, follow <em>Northlight</em>. They know the path to the Archive."</p>
+                <p>Northlight left their own sign somewhere within this site.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Hydrophone map</h2>
+            <p>A chalk map displays hydrophone readings around the reef. Each note corresponds to a letter:</p>
+            <ul class="hydrophone">
+                <li>Low C &mdash; <strong>N</strong>orth pier crackles.</li>
+                <li>High F &mdash; <strong>O</strong>verhead gull cry overlays the signal.</li>
+                <li>Rest beat &mdash; <strong>R</strong>ipple disappears near the intake vent.</li>
+                <li>Chorus swell &mdash; <strong>T</strong>ide wraps the lower stairs.</li>
+                <li>G minor &mdash; <strong>H</strong>um bleeds into the archive door.</li>
+            </ul>
+            <p class="note">Together they chant the name of the hidden archivist. Seek them if you crave one last secret.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>The undertow recedes, awaiting your return.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

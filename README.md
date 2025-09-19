@@ -1,33 +1,36 @@
-# The Lighthouse
+# The Lighthouse ARG
 
-The Lighthouse is an Alternate Reality Game (ARG) website. This project contains all the necessary files and directories to run the website.
+The Lighthouse is an Alternate Reality Game (ARG) website that chronicles the disappearance of Warden Ilya Moreau and the strange silence surrounding the lighthouse beam. The experience blends interactive puzzles, encoded transmissions, and hidden pages that gradually reveal the truth about the Undertow Collective.
 
-## Project Structure
+## Experience overview
 
-- `theLighthouse/` - Root directory of the project.
-  - `index.html` - The main HTML file.
-  - `css/` - Directory for CSS files.
-    - `style.css` - Main CSS file for styling the website.
-  - `js/` - Directory for JavaScript files.
-    - `main.js` - Main JavaScript file for handling the website's functionality.
-  - `img/` - Directory for image files.
-  - `audio/` - Directory for audio files.
-  - `video/` - Directory for video files.
+1. **Signal archive** &mdash; Decode Caesar-shifted transmissions to recover Moreau's warnings.
+2. **Logbook terminal** &mdash; Use the recovered rhythm to unlock access to the lantern room.
+3. **Lantern Room** &mdash; Align constellations and decipher Moreau's diary emphasis.
+4. **Underdeck** &mdash; Tune resonance levers to unseal the vault and learn of the archivist.
+5. **Northlight** &mdash; Follow the hidden archivist for the final encoded instructions.
 
-## Setup
+Lore fragments, spectral notes, and CSS comments hide additional hints for players who dig deeper.
 
-To set up the project, follow these steps:
+## Project structure
 
-1. Clone the repository to your local machine.
-2. Open the `index.html` file in your web browser.
+- `theLighthouse/` &mdash; Root directory of the project.
+  - `index.html` &mdash; Main entry point with transmissions, lore, and first puzzle.
+  - `lantern-room.html` &mdash; Secondary page unlocked through the logbook puzzle.
+  - `underdeck.html` &mdash; Resonance vault puzzle and final lore reveal.
+  - `northlight.html` &mdash; Hidden archivist page containing the concluding clue.
+  - `css/style.css` &mdash; Visual style, atmospheric gradients, and hidden hints.
+  - `js/main.js` &mdash; Puzzle logic, cipher decoding, and interactive behaviour.
 
-## Usage
+## Getting started
 
-Navigate the website as you would any other ARG. Interact with elements, solve puzzles, and uncover the story of the Lighthouse.
+1. Open `theLighthouse/index.html` in your browser.
+2. Explore the dossier, decode the transmissions, and enter the discovered rhythm into the logbook terminal.
+3. Continue following the leads; each solved puzzle unlocks deeper lore and additional locations.
 
-## Contributing
+## Development
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+No build step is required. Update the HTML, CSS, and JavaScript files directly and reload the page to see changes.
 
 ## License
 

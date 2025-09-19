@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northlight // Lighthouse Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="subpage">
+    <header class="subpage__header">
+        <div class="container">
+            <p class="hero__eyebrow">Signal routed through covert channel</p>
+            <h1>Northlight's confession</h1>
+            <p>I kept the archive sealed while Moreau baited the Undertow Collective. You followed the hum well.</p>
+            <p><a class="inline-link" href="underdeck.html">← Surface to the underdeck</a></p>
+        </div>
+    </header>
+
+    <main class="container subpage__main">
+        <section class="card card--soft">
+            <h2>Final fragment</h2>
+            <p>Northlight speaks: &ldquo;The archive is not a place. It is the agreement that we will remember. Still, you earned more.&rdquo;</p>
+            <p>A folded note bears an encoded string: <code>RklOQUw6IEFTSEVOIFNQRUNUUiAxMi8z</code>.</p>
+            <button class="button button--primary" id="northlight-reveal" type="button">Reveal the decoded note</button>
+            <div id="northlight-message" class="hidden reveal-card" aria-hidden="true">
+                <h3>Decoded instructions</h3>
+                <p><strong>FINALE:</strong> ASHEN SPECTR 12/3 &mdash; Present this phrase at the old storm cellar beneath Pier 3. The archive door will open.</p>
+                <p>Until then, leave the beam dark. Let the sea forget the Undertow.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Echo oath</h2>
+            <p class="concealed" aria-hidden="true">Only those who listen to the tide without fear may carry the light again.</p>
+            <p class="note">(Hover or tap the space above to read the oath.)</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Signal terminated. Archive secured.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

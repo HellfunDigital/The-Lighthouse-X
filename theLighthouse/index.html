@@ -3,21 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Lighthouse</title>
+    <title>The Lighthouse // ARG Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to The Lighthouse ARG</h1>
+    <header class="hero" id="top">
+        <div class="hero__overlay"></div>
+        <div class="hero__content container">
+            <p class="hero__eyebrow">The Lantern has been dark for 87 nights</p>
+            <h1>The Lighthouse Project</h1>
+            <p class="hero__lead">Track the last transmissions of Warden Ilya Moreau, decode the lighthouse systems, and uncover why the beam fell silent.</p>
+            <button class="button button--primary" id="start-signal" type="button">Activate Beacon Pulse</button>
+        </div>
+        <a class="hero__scroll" href="#story" aria-label="Scroll to story">▼</a>
     </header>
+
+    <nav class="global-nav" aria-label="Primary navigation">
+        <div class="container">
+            <ul>
+                <li><a href="#story">Incident dossier</a></li>
+                <li><a href="#transmissions">Signal archive</a></li>
+                <li><a href="#logbook">Logbook terminal</a></li>
+                <li><a href="#fragments">Lore fragments</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <main>
-        <section id="game-section">
-            <!-- Game content will be dynamically generated here -->
+        <section id="story" class="section container">
+            <h2>Incident dossier</h2>
+            <div class="grid grid--two">
+                <article class="card">
+                    <h3>Timeline</h3>
+                    <ol class="timeline">
+                        <li><span class="timeline__time">Day 0</span>Routine check-in received. Moreau reports <strong>anomalous hum</strong> beneath the lantern room lens.</li>
+                        <li><span class="timeline__time">Day 12</span>Supply crew finds the lamp cold but <strong>Fresnel array still rotating</strong>. Keeper missing.</li>
+                        <li><span class="timeline__time">Day 41</span>All shoreline beacons begin to flicker in rhythm, signalling <strong>3-1-4-1</strong>.</li>
+                        <li><span class="timeline__time">Day 87</span>Final burst received: a Morse triple pulse followed by silence. This site was built to coordinate the search.</li>
+                    </ol>
+                </article>
+                <article class="card">
+                    <h3>Primary suspects</h3>
+                    <ul class="suspects">
+                        <li><strong>The Undertow Collective</strong> &mdash; Salvage guild obsessed with resonant acoustics.</li>
+                        <li><strong>Echo Bloom</strong> &mdash; Experimental AI lighthouse assistant, <em>decommissioned</em> last year.</li>
+                        <li><strong>Warden Moreau</strong> &mdash; Last seen cataloguing relics in the lantern room. Known to stash puzzles.</li>
+                    </ul>
+                    <p class="note">Hint: Every suspect leaves a different pattern in the data. Track the numbers, track the culprit.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="transmissions" class="section section--accent">
+            <div class="container">
+                <h2>Signal archive</h2>
+                <p>Three clipped transmissions were recovered from the Lighthouse relays. Decode each one to assemble the keeper's instructions.</p>
+                <ul class="transmissions" role="list">
+                    <li class="transmission card" data-shift="7" data-cipher="Sluz yvahapvu svjrlk ha aopyk thyr. Rllwly tpzzpun iba svnivvr obttpun.">
+                        <header class="transmission__header">
+                            <span class="transmission__label">Signal 01</span>
+                            <span class="transmission__time">1901 hrs</span>
+                        </header>
+                        <p class="transmission__cipher" aria-label="Encoded message">Sluz yvahapvu svjrlk ha aopyk thyr. Rllwly tpzzpun iba svnivvr obttpun.</p>
+                        <button class="button transmission__action" type="button">Decode</button>
+                        <p class="transmission__decoded hidden" aria-live="polite"></p>
+                    </li>
+                    <li class="transmission card" data-shift="7" data-cipher="Tvvu apkl ylclhsz iylahrdhaly chbsa. Hspnu shtwspnoa dpao 3-1-4-1 yofaot.">
+                        <header class="transmission__header">
+                            <span class="transmission__label">Signal 02</span>
+                            <span class="transmission__time">2238 hrs</span>
+                        </header>
+                        <p class="transmission__cipher" aria-label="Encoded message">Tvvu apkl ylclhsz iylahrdhaly chbsa. Hspnu shtwspnoa dpao 3-1-4-1 yofaot.</p>
+                        <button class="button transmission__action" type="button">Decode</button>
+                        <p class="transmission__decoded hidden" aria-live="polite"></p>
+                    </li>
+                    <li class="transmission card" data-shift="7" data-cipher="Uvyao zahpyz ihyylk. Spzalu ilsvd kljr; aol dvyk fvb zllr ahzalz vm zhsa.">
+                        <header class="transmission__header">
+                            <span class="transmission__label">Signal 03</span>
+                            <span class="transmission__time">Final burst</span>
+                        </header>
+                        <p class="transmission__cipher" aria-label="Encoded message">Uvyao zahpyz ihyylk. Spzalu ilsvd kljr; aol dvyk fvb zllr ahzalz vm zhsa.</p>
+                        <button class="button transmission__action" type="button">Decode</button>
+                        <p class="transmission__decoded hidden" aria-live="polite"></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="logbook" class="section container">
+            <div class="grid grid--two">
+                <article class="card">
+                    <h2>Logbook terminal</h2>
+                    <p>Moreau's logbook is protected by a numeric rhythm. Use the decoded transmissions to derive the access code.</p>
+                    <form id="logbook-form" class="puzzle-form" novalidate>
+                        <label for="logbook-code">Enter the four-digit sequence</label>
+                        <input id="logbook-code" name="logbook-code" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="_ _ _ _" required>
+                        <button class="button button--primary" type="submit">Unlock</button>
+                        <p class="status-message" id="logbook-status" role="status" aria-live="polite"></p>
+                    </form>
+                    <div id="logbook-solution" class="hidden reveal-card" aria-hidden="true">
+                        <h3>Access granted</h3>
+                        <p>The logbook hums to life and projects a stairwell diagram. The lantern room door is ajar.</p>
+                        <p><a class="inline-link" href="lantern-room.html">Enter the Lantern Room</a></p>
+                    </div>
+                </article>
+                <article class="card card--soft">
+                    <h3>Beacon lore</h3>
+                    <p>The Lighthouse predates the harbor by a century. Its Fresnel array is etched with <strong>five constellations</strong>, each humming at a different harmonic. The initials of these constellations form a word Moreau cherished.</p>
+                    <p class="note">Keep this in mind when you reach the lantern room. Salt preserves secrets.</p>
+                    <div class="spectral-note" aria-hidden="true">Northbound watchers whisper: <span class="spectral-note__letters">N O R T H L I G H T</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="fragments" class="section section--dim">
+            <div class="container">
+                <h2>Lore fragments</h2>
+                <div class="grid grid--three">
+                    <article class="fragment card">
+                        <h3>Harbor ordinance</h3>
+                        <p>The city archives mention a contingency named <em>Project Undertow</em>, meant to lure something sleeping beneath the reef. Funding stopped the same week Moreau took watch.</p>
+                    </article>
+                    <article class="fragment card">
+                        <h3>Echo Bloom memo</h3>
+                        <p>AI assistant logs show the phrase &ldquo;When the beam fails, listen below&rdquo; repeated 87 times. Bloom insists the phrase was seeded by the keeper.</p>
+                    </article>
+                    <article class="fragment card">
+                        <h3>Relic manifest</h3>
+                        <p>Among the recovered crates was a brass astrolabe engraved with the letters <strong>B.R.I.N.E.</strong> Each letter marks a notch along the rim.</p>
+                    </article>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>© 2022 The Lighthouse ARG</p>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 The Lighthouse Investigation</p>
+            <p class="footer__hint">Source code hides as many secrets as the shoreline.</p>
+        </div>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>
